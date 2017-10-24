@@ -5,8 +5,7 @@
 '''
 本程序将ADBLockPlus的规则转为SQUID的规则
 数据来源：   https://easylist.adblockplus.org/en/
-下载的地址： https://easylist-downloads.adblockplus.org/easylist.txt
-           https://easylist-downloads.adblockplus.org/easylistchina.txt
+下载的地址： https://easylist-downloads.adblockplus.org/easylistchina+easylist.txt
 SQUID 设置：
    acl adblock url_regex "/etc/squid/adblock.acl"
    http_access deny adblock
@@ -38,5 +37,4 @@ def addrules(url):
         print line
 
 if __name__ == '__main__':
-    addrules("https://easylist-downloads.adblockplus.org/easylistchina.txt")
-    addrules("https://easylist-downloads.adblockplus.org/easylist.txt")
+    addrules("https://easylist-downloads.adblockplus.org/easylistchina+easylist.txt")
